@@ -1,0 +1,29 @@
+Let's break down the Dice Rolling Simulator code and explain each part step by step:
+
+1. **Importing Dependencies:**
+   - The code starts by importing the necessary dependencies: `random` for generating random numbers and `FastAPI` for building the API.
+
+2. **Dice Roll Function:**
+   - `roll_dice()` simulates rolling a dice and generates a random number between 1 and 6 using the `random.randint()` function.
+
+3. **FastAPI Application:**
+   - `app = FastAPI()` creates the FastAPI application instance.
+
+4. **Root Endpoint (`/`):**
+   - This endpoint responds to a GET request at the root URL (`/`) and returns a welcome message.
+
+5. **Roll Endpoint (`/roll`):**
+   - This endpoint responds to a GET request at the `/roll` URL and simulates rolling the dice.
+   - The `roll()` function calls the `roll_dice()` function to generate a random dice roll.
+   - The API responds with a result message indicating the outcome of the dice roll.
+
+6. **Running the Application:**
+   - The code block under `if __name__ == "__main__":` runs the FastAPI application using the Uvicorn server.
+   - The application will be accessible at `http://localhost:8000`.
+
+7. **Overall:**
+   - The code creates a Dice Rolling Simulator API using FastAPI.
+   - The API provides endpoints for getting a welcome message and simulating dice rolls.
+   - When you access the `/roll` endpoint, the API generates a random dice roll and returns the result.
+
+You can run the code, access the API endpoints using a web browser or API client (such as `curl` or Postman), and see how the Dice Rolling Simulator works using the FastAPI framework.
